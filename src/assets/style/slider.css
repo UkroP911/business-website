@@ -1,0 +1,34 @@
+.slider-section {
+  background: #81e4ed; }
+
+.slider-wrap {
+  width: 100%;
+  padding: 20px 15px 15px; }
+
+.slick-dots {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+  .slick-dots li {
+    display: inline-block;
+    margin-right: 17px; }
+    .slick-dots li:last-child {
+      margin-right: 0; }
+  .slick-dots button {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: #626262;
+    border: none;
+    border-radius: 50%;
+    font-size: 0;
+    color: transparent;
+    outline: none;
+    cursor: pointer; }
+
+.slick-slide img {
+  width: 100%; }
+
+.slick-active button {
+  background: #ffffff; }

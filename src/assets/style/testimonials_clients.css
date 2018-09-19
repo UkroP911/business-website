@@ -1,0 +1,10 @@
+.tesCli__content {
+  padding: 0 15px 20px; }
+
+.tesCli__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.tesCli__column {
+  width: 45%; }
