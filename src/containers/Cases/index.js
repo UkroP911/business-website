@@ -15,7 +15,7 @@ class Cases extends Component{
             arr.push(<CasesPreview key={i} />)
         }
         return arr;
-    }
+    };
     render(){
         return(
             <section className="cases">

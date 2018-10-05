@@ -1,0 +1,29 @@
+.contact-page{
+  padding: 50px 0 0;
+}
+
+.contact-page__content{
+  display: flex;
+  padding: 40px 15px 0;
+}
+
+.contact-page__col{
+  width: 50%;
+}
+
+.contact-page__sub-title{
+  p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+  }
+  a{
+    font-size: 15px;
+    font-weight: 700;
+    color: #2aacc8;
+    text-decoration: none;
+    &:hover,&:focus{
+      text-decoration: underline;
+    }
+  }
+}

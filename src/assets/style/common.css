@@ -8,19 +8,41 @@ html, body {
   padding: 0; }
 
 #root {
-  height: 100%; }
+  height: 100%;
+  animation: root 1s; }
+
+@keyframes root {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 .App {
+  height: 100%;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden; }
+
+.main {
+  position: relative;
+  flex: 1; }
+
+.transition-group {
   height: 100%; }
 
 .main-content {
-  flex: 1; }
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; }
 
 .container {
   width: 74.4%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  transition: width .3s ease; }
 
 .sprite-icon {
   width: 53px;
@@ -43,3 +65,48 @@ html, body {
 
 .bg-facebook {
   background: url("./../images/sprites.png") -156px -81px; }
+
+.pageSwitch1-enter {
+  opacity: 0.01;
+  transform: translateX(-100%); }
+
+.pageSwitch1-enter.pageSwitch1-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 500ms ease,transform 1000ms ease; }
+
+.pageSwitch1-exit {
+  opacity: 1;
+  transform: translateX(0); }
+
+.pageSwitch1-exit.pageSwitch1-exit-active {
+  opacity: 0.01;
+  transform: translateX(100%);
+  transition: opacity 500ms ease,transform 1000ms ease; }
+
+.pageSwitch2-enter {
+  opacity: 0.01;
+  transform: translateX(100%); }
+
+.pageSwitch2-enter.pageSwitch2-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 500ms ease,transform 1000ms ease; }
+
+.pageSwitch2-exit {
+  opacity: 1;
+  transform: translateX(0); }
+
+.pageSwitch2-exit.pageSwitch2-exit-active {
+  opacity: 0.01;
+  transform: translateX(-100%);
+  transition: opacity 500ms ease,transform 1000ms ease; }
+
+@media screen and (max-width: 840px) {
+  .container {
+    width: 82%; } }
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    margin: 0; } }

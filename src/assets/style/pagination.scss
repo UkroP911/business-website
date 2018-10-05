@@ -1,0 +1,29 @@
+.pagination{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pagination__link{
+  display: block;
+  padding: 8px 11px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  text-decoration: none;
+  transition: all .2s ease;
+  &:hover,&:focus{
+    background: #81e4ed;
+    color: #5b5b5b;
+  }
+}
+
+.pagination__link_arrow{
+  background: #e8ebf1;
+  color: #2aacc8;
+}
+
+.pagination__link_arrow-mr{
+  margin-right: 25px;
+}

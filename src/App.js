@@ -1,28 +1,21 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Route } from 'react-router-dom';
+import {BrowserRouter as Router } from 'react-router-dom';
 
 import './assets/style/common.css';
+import './assets/style/btn_input.css'
 
-import * as routes from './constants/routes'
-
-import Header from './containers/Header';
-import Footer from './containers/Footer';
-import MainPage from './containers/MainPage'
+import AnimatedPages from './AnimatedPages';
 
 class App extends Component {
-  render() {
-    return (
-        <Router>
-            <div className="App">
-                <Header/>
-                    <main className="main-content">
-                        <Route to={routes.MAIN_PAGE} component={MainPage}/>
-                    </main>
-                <Footer/>
-            </div>
-        </Router>
-    );
-  }
+    render() {
+        return (
+            <Router>
+
+                    <AnimatedPages/>
+
+            </Router>
+        );
+    }
 }
 
 export default App;

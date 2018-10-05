@@ -94,12 +94,9 @@ class Footer extends Component{
                                 <br/>
                                 Source design template: <a className="copyright" href="http://www.graphicsfuel.com">http://www.graphicsfuel.com</a>
                             </p>
-
-
                             <div className="logo">
                                 <img src={logo} alt="Bis Lite Company"/>
                             </div>
-
                         </div>
                     </div>
                 </div>

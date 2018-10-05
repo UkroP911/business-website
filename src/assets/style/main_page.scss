@@ -1,0 +1,20 @@
+.main-page{
+  @media screen and (max-width: 992px){
+    .cases__body{
+      flex-wrap: wrap;
+    }
+    .cases__item{
+      width: 48%;
+      &:nth-child(2n){
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 400px){
+    .cases__item{
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import {NavLink} from 'react-router-dom';
+import  * as routes from './../../constants/routes';
 
 import '../../assets/style/header.css'
 import logo from './../../assets/images/bislite.png'
@@ -10,27 +11,35 @@ class Header extends Component{
     constructor(props){
         super(props);
         this.state = {
-            showDropdown: false,
-            activedrop: 0
+            isOpen: false,
+            direction: true,
         };
-        this.handleDropdown = this.handleDropdown.bind(this)
+        this.toggleNav = this.toggleNav.bind(this);
+        this.hideNav = this.hideNav.bind(this)
     }
 
-    handleDropdown = (dropNumber,e) => {
+    toggleNav(){
         this.setState({
-            activedrop: dropNumber
+            isOpen: !this.state.isOpen,
         });
-        document.addEventListener("click", this.hideDropdown);
-        e.preventDefault()
-    };
+        document.addEventListener("click", this.hideNav);
+    }
 
-    hideDropdown = () => {
-        this.setState({ activedrop: 0 });
-        document.removeEventListener("click", this.hideDropdown);
-    };
+    hideNav(){
+        this.setState({
+            isOpen: false,
+        });
+        document.removeEventListener("click", this.hideNav);
+    }
+
+    childFactoryCreator = (classNames) => (
+        (child) => (
+            React.cloneElement(child, {classNames})
+        )
+    );
 
     render(){
-        const {activedrop} = this.state;
+        const {isOpen} = this.state;
         return(
             <header className="header">
                 <div className="container">
@@ -38,41 +47,47 @@ class Header extends Component{
                         <div className="logo">
                             <img src={logo} alt="Bis Lite Company"/>
                         </div>
-                        <nav className="header__nav">
-                            <div className="header__nav-link"><NavLink to="/">Home</NavLink></div>
-                            <div className="header__nav-link"><NavLink to="/">About Us</NavLink></div>
-                            <div className={`header__nav-link `} >
-                                <NavLink to="/" onClick={(e) => this.handleDropdown(1,e)}>Services</NavLink>
-                                    {activedrop === 1 ?
-
-                                        <div className="header__dropdown">
-                                            <ul className="header__dropdown-list">
-                                                <li><NavLink to="/">Web Design</NavLink></li>
-                                                <li><NavLink to="/">Wordpress Design</NavLink></li>
-                                                <li><NavLink to="/">Mobile App Devplopment</NavLink></li>
-                                                <li><NavLink to="/">Internet Marketing</NavLink></li>
-                                                <li><NavLink to="/">Social Media Management</NavLink></li>
-                                            </ul>
-                                        </div>
-                                        : null
-                                    }
+                        <nav className={`header__nav ${isOpen ? 'active' : ''}`}>
+                            <div className="header__nav-link">
+                                <NavLink
+                                    to={routes.MAIN_PAGE}
+                                    onClick={(event) => this.props.onNavLinkClick(routes.MAIN_PAGE,event)}
+                                    exact={true}
+                                    activeClassName="active"
+                                >
+                                    Home
+                                </NavLink>
                             </div>
                             <div className={`header__nav-link `} >
-                                <NavLink to="/" onClick={(e) => this.handleDropdown(2,e)}>Portfolio</NavLink>
-                                    {activedrop === 2 ?
-                                        <div className="header__dropdown">
-                                            <ul className="header__dropdown-list">
-                                                <li><NavLink to="/">Portfolio</NavLink></li>
-                                                <li><NavLink to="/">Landings</NavLink></li>
-                                                <li><NavLink to="/">Shops</NavLink></li>
-                                            </ul>
-                                        </div>
-                                        : null
-                                    }
+                                <NavLink
+                                    to={routes.PORTFOLIO}
+                                    onClick={() => this.props.onNavLinkClick(routes.PORTFOLIO)}
+                                    activeClassName="active"
+                                >
+                                    Portfolio
+                                </NavLink>
                             </div>
-                            <div className="header__nav-link"><NavLink to="/">Blog</NavLink></div>
-                            <div className="header__nav-link"><NavLink to="/">Contact Us</NavLink></div>
+                            <div className="header__nav-link">
+                                <NavLink to="/test">Blog</NavLink>
+                            </div>
+                            <div className="header__nav-link">
+                                <NavLink
+                                    to={routes.CONTACT_US}
+                                    onClick={() => this.props.onNavLinkClick(routes.CONTACT_US)}
+                                    activeClassName="active"
+                                >
+                                    Contact Us
+                                </NavLink>
+                            </div>
                         </nav>
+
+                        <button className="toggle-nav"
+                            onClick={() => this.toggleNav()}
+                        >
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
                     </div>
                 </div>
             </header>
@@ -80,4 +95,4 @@ class Header extends Component{
     }
 }
 
-export default Header
+export default Header;
