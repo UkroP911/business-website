@@ -4,16 +4,19 @@
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.07);
   overflow: hidden;
 }
+
 .main-page__articles-content{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 60px 15px 50px;
 }
+
 .main-page__articles-column{
   max-width: 400px;
   width: 25%;
 }
+
 // Article preview
 .article-preview{
   max-width: 400px;
@@ -26,6 +29,7 @@
   align-items: center;
   margin-bottom: 20px;
 }
+
 .article-preview__logo{
   flex-shrink: 0;
   position: relative;
@@ -35,6 +39,7 @@
   border-radius: 50%;
   background: #2aacc8;
 }
+
 .article-preview__title{
   margin: 0;
   font-size: 15px;
@@ -43,6 +48,7 @@
   color: #000000;
   transition: all .2s ease;
 }
+
 .article-preview__body{
   margin-bottom: 30px;
   p{
@@ -53,9 +59,11 @@
     color: #363636;
   }
 }
+
 .article-preview__footer{
 
 }
+
 .article-preview__link{
   font-size: 13px;
   font-weight: 400;
@@ -80,18 +88,22 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .bg-fullscreen {
   width: 21px; height: 17px;
   background: url('./../images/article_icon_sprites.png') -10px -54px;
 }
+
 .bg-list {
   width: 16px; height: 16px;
   background: url('./../images/article_icon_sprites.png') -51px -54px;
 }
+
 .bg-pencil {
   width: 21px; height: 24px;
   background: url('./../images/article_icon_sprites.png') -56px -10px;
 }
+
 .bg-plane {
   width: 26px; height: 24px;
   background: url('./../images/article_icon_sprites.png') -10px -10px;
@@ -102,30 +114,39 @@
   opacity: 0.01;
   transition: opacity 2s ease, transform 2s ease;
 }
+
 .prevArt-enter.prevArt-enter-active{
   opacity: 1;
 }
+
 .prevArt-enter:nth-child(1) {
   transform:  translateX(-50%);
 }
+
 .prevArt-enter.prevArt-enter-active:nth-child(1) {
   transform:  translateX(0%);
 }
+
 .prevArt-enter:nth-child(2) {
   transform:  translateY(50%);
 }
+
 .prevArt-enter.prevArt-enter-active:nth-child(2) {
   transform:  translateY(0%);
 }
+
 .prevArt-enter:nth-child(3) {
   transform:  translateY(-50%);
 }
+
 .prevArt-enter.prevArt-enter-active:nth-child(3) {
   transform:  translateY(0%);
 }
+
 .prevArt-enter:nth-child(4) {
   transform:  translateX(50%);
 }
+
 .prevArt-enter.prevArt-enter-active:nth-child(4) {
   transform:  translateX(0%);
 }

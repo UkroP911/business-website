@@ -76,14 +76,14 @@ class Footer extends Component{
                             <div className="footer__content-col">
                                 <div className="footer__col-title">Connect with us</div>
                                 <div className="footer__social-row">
-                                    <div className="sprite-icon bg-facebook"> </div>
-                                    <div className="sprite-icon bg-dribbble"> </div>
-                                    <div className="sprite-icon bg-pinterest"> </div>
+                                    <div className="sprite-icon bg-facebook" />
+                                    <div className="sprite-icon bg-dribbble" />
+                                    <div className="sprite-icon bg-pinterest" />
                                 </div>
                                 <div className="footer__social-row">
-                                    <div className="sprite-icon bg-linkedin"> </div>
-                                    <div className="sprite-icon bg-skype"> </div>
-                                    <div className="sprite-icon bg-share"> </div>
+                                    <div className="sprite-icon bg-linkedin" />
+                                    <div className="sprite-icon bg-skype" />
+                                    <div className="sprite-icon bg-share" />
                                 </div>
                             </div>
                         </div>

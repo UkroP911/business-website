@@ -51,14 +51,14 @@ class Header extends Component{
                             <div className="header__nav-link">
                                 <NavLink
                                     to={routes.MAIN_PAGE}
-                                    onClick={(event) => this.props.onNavLinkClick(routes.MAIN_PAGE,event)}
+                                    onClick={() => this.props.onNavLinkClick(routes.MAIN_PAGE)}
                                     exact={true}
                                     activeClassName="active"
                                 >
                                     Home
                                 </NavLink>
                             </div>
-                            <div className={`header__nav-link `} >
+                            <div className="header__nav-link ">
                                 <NavLink
                                     to={routes.PORTFOLIO}
                                     onClick={() => this.props.onNavLinkClick(routes.PORTFOLIO)}
@@ -84,9 +84,9 @@ class Header extends Component{
                         <button className="toggle-nav"
                             onClick={() => this.toggleNav()}
                         >
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                            <span/>
+                            <span/>
+                            <span/>
                         </button>
                     </div>
                 </div>

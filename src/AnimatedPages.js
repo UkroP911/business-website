@@ -33,7 +33,7 @@ class AnimatedPages extends Component{
         )
     );
 
-    onNavLinkClick = (route,event) => {
+    onNavLinkClick = (route) => {
         let routesArr = [];
         let currentPath = this.props.location.pathname;
         let nextPath = route;
@@ -99,8 +99,6 @@ class AnimatedPages extends Component{
 
                 </TransitionGroup>
                 </main>
-
-
             </div>
         )
     }

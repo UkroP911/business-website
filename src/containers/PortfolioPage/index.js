@@ -56,9 +56,6 @@ class PortfolioPage extends Component{
         document.removeEventListener("click", this.hideFilers);
     }
 
-
-
-
     render(){
         const {isOpen} = this.state;
         return(

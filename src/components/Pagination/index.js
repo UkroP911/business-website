@@ -4,12 +4,6 @@ import './../../assets/style/pagination.css';
 
 export default () =>{
 
-    // const {
-    //     colPages,
-    //     currentPage,
-    //     handlePagination,
-    // } = props;
-
     let pagesList= [];
 
     for (let i = 0; i < 5; i++) {
