@@ -98,28 +98,10 @@
 .prevArt-enter.prevArt-enter-active {
   opacity: 1; }
 
-.prevArt-enter:nth-child(1) {
-  transform: translateX(-50%); }
-
-.prevArt-enter.prevArt-enter-active:nth-child(1) {
-  transform: translateX(0%); }
-
-.prevArt-enter:nth-child(2) {
+.prevArt-enter {
   transform: translateY(50%); }
 
-.prevArt-enter.prevArt-enter-active:nth-child(2) {
-  transform: translateY(0%); }
-
-.prevArt-enter:nth-child(3) {
-  transform: translateY(-50%); }
-
-.prevArt-enter.prevArt-enter-active:nth-child(3) {
-  transform: translateY(0%); }
-
-.prevArt-enter:nth-child(4) {
-  transform: translateX(50%); }
-
-.prevArt-enter.prevArt-enter-active:nth-child(4) {
+.prevArt-enter.prevArt-enter-active {
   transform: translateX(0%); }
 
 @media screen and (max-width: 1200px) {

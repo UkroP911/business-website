@@ -8,6 +8,21 @@ import logo from "../../assets/images/cursor.png";
 
 class ContactUsPage extends Component{
 
+    componentDidMount(){
+        this.addTransformClass();
+    }
+
+    addTransformClass = () => {
+        let elems = document.querySelectorAll('.animated-input');
+        let elemsToArr = Array.from(elems);
+        let arrLength = elemsToArr.length;
+        let i = 0;
+
+        setTimeout(function test() {
+            elemsToArr[i].classList.add('transition-height');
+            if(++i < arrLength) setTimeout(test, 200)
+        },200);
+    };
     render(){
         return(
             <div className="contact-page">
@@ -27,9 +42,6 @@ class ContactUsPage extends Component{
                                 </p>
                             </div>
                             <ContactForm/>
-                        </div>
-                        <div className="contact-page__col">
-                            <Map/>
                         </div>
                     </div>
                 </div>

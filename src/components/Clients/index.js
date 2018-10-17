@@ -10,7 +10,7 @@ import john from './../../assets/images/john-deer.png'
 import banana from './../../assets/images/banana.png'
 import fujifilm from './../../assets/images/fujifilm.png'
 
-export default () =>
+export default (props) =>
     <div className="clients">
         <div className="cases__header">
             <div className="cases__title">

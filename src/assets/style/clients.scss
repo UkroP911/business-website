@@ -15,11 +15,18 @@
   border: 1px solid #e8ebf1;
   box-shadow: inset 0 0 25px #e8ebf1;
   background: #ffffff;
+  transform: scale(.1);
+  opacity: 0;
+  transition: all .5s ease;
 }
 
 .clients__img-wrap{
-
   img{
     width: 100%;
   }
+}
+
+.bubbledClass{
+  transform: scale(1);
+  opacity: 1;
 }

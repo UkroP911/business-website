@@ -11,15 +11,21 @@ class PortfolioPage extends Component{
         super(props);
         this.state = {
             isOpen: false,
+            showCases: true
         };
         this.toggleFilter = this.toggleFilter.bind(this);
         this.hideFilers = this.hideFilers.bind(this);
     }
 
+    componentDidMount(){
+        this.addBubbleClass();
+    }
+
     renderPreview(){
         let arr = [];
+        let {showCases} = this.state;
         for (let i = 0; i < 16; i++ ){
-            arr.push(<CasesPreview key={i} />)
+            arr.push(<CasesPreview showCases={showCases} key={i} />)
         }
         return arr;
     }
@@ -55,6 +61,18 @@ class PortfolioPage extends Component{
         });
         document.removeEventListener("click", this.hideFilers);
     }
+
+    addBubbleClass = () => {
+        let elems = document.querySelectorAll('.cases__item');
+        let elemsToArr = Array.from(elems);
+        let arrLength = elemsToArr.length;
+        let i = 0;
+
+        setTimeout(function test() {
+            elemsToArr[i].classList.add('bubbledClass');
+            if(++i < arrLength) setTimeout(test, 40)
+        },150);
+    };
 
     render(){
         const {isOpen} = this.state;

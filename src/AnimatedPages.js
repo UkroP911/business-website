@@ -94,7 +94,6 @@ class AnimatedPages extends Component{
                             <Footer/>
                         </div>
 
-
                     </CSSTransition>
 
                 </TransitionGroup>
