@@ -31,3 +31,9 @@
   cursor: pointer; }
   .banner-btn:hover, .banner-btn:focus {
     background: #2aacc8 linear-gradient(to top, #2aacc8 0%, #60cede 25%, #72dae6 50%, #81e4ed 100%); }
+
+@media screen and (max-width: 600px) {
+  .banner {
+    flex-direction: column; }
+  .banner__text {
+    width: 100%; } }

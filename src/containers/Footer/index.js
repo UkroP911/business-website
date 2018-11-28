@@ -76,14 +76,14 @@ class Footer extends Component{
                             <div className="footer__content-col">
                                 <div className="footer__col-title">Connect with us</div>
                                 <div className="footer__social-row">
-                                    <div className="sprite-icon bg-facebook"> </div>
-                                    <div className="sprite-icon bg-dribbble"> </div>
-                                    <div className="sprite-icon bg-pinterest"> </div>
+                                    <div className="sprite-icon bg-facebook" ><a href="#"/></div>
+                                    <div className="sprite-icon bg-dribbble" ><a href="#"/></div>
+                                    <div className="sprite-icon bg-pinterest"><a href="#"/></div>
                                 </div>
                                 <div className="footer__social-row">
-                                    <div className="sprite-icon bg-linkedin"> </div>
-                                    <div className="sprite-icon bg-skype"> </div>
-                                    <div className="sprite-icon bg-share"> </div>
+                                    <div className="sprite-icon bg-linkedin"><a href="#"/></div>
+                                    <div className="sprite-icon bg-skype"><a href="#"/></div>
+                                    <div className="sprite-icon bg-share"><a href="#"/></div>
                                 </div>
                             </div>
                         </div>
@@ -94,12 +94,9 @@ class Footer extends Component{
                                 <br/>
                                 Source design template: <a className="copyright" href="http://www.graphicsfuel.com">http://www.graphicsfuel.com</a>
                             </p>
-
-
                             <div className="logo">
                                 <img src={logo} alt="Bis Lite Company"/>
                             </div>
-
                         </div>
                     </div>
                 </div>

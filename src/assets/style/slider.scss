@@ -1,10 +1,12 @@
 .slider-section{
   background: #81e4ed;
 }
+
 .slider-wrap{
   width: 100%;
   padding: 20px 15px 15px;
 }
+
 .slick-dots{
   text-align: center;
   padding: 0;
@@ -30,11 +32,13 @@
     cursor: pointer;
   }
 }
+
 .slick-slide{
   img{
     width: 100%;
   }
 }
+
 .slick-active{
   button{
     background: #ffffff;

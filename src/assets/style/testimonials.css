@@ -1,9 +1,20 @@
-.testimonials p {
-  margin: 0 0 40px;
-  font-size: 14px;
-  line-height: 24px;
-  color: #363636; }
+.testimonials {
+  transition: all .9s ease; }
+  .testimonials p {
+    margin: 0 0 40px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #363636; }
+  .testimonials cite {
+    font-size: 14px;
+    font-weight: 700; }
 
-.testimonials cite {
-  font-size: 14px;
-  font-weight: 700; }
+.testimonials__body div {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all .9s ease; }
+
+div.scrollClass {
+  width: 100%;
+  height: 200px; }

@@ -5,7 +5,7 @@ import logo from "../../assets/images/cursor.png";
 
 
 
-export default () =>
+export default (props) =>
     <div className="testimonials">
         <div className="cases__header">
             <div className="cases__title">
@@ -14,14 +14,14 @@ export default () =>
             </div>
         </div>
         <div className="testimonials__body">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut nulla sapien, at aliquam erat. Sed
-                vitae massa tellus. Aliquam commodo aliquam metus, sed iaculis nibh tempus id. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-                posuere cubilia Curae; Etiam nec nisi in nisl euismod fringilla.
-
-
-            </p>
+            <div className={props.scrollClass}>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut nulla sapien, at aliquam erat. Sed
+                    vitae massa tellus. Aliquam commodo aliquam metus, sed iaculis nibh tempus id. Lorem ipsum dolor sit
+                    amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+                    posuere cubilia Curae; Etiam nec nisi in nisl euismod fringilla.
+                </p>
+            </div>
             <cite>John Travis, CEO, DomainName.com</cite>
         </div>
     </div>

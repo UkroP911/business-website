@@ -1,0 +1,88 @@
+//Inputs
+
+.form-group{
+  margin-bottom: 25px;
+  position: relative;
+  padding: 15px 0 0;
+  label{
+    display: block;
+    margin-bottom: 13px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+
+
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    opacity: 0;
+    transform: translateY(0) scale(1);
+    transform-origin: 0 0;
+    transition: all .3s;
+  }
+
+  input{
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    margin: 0;
+    border: 1px solid #b4bac5;
+    outline-color: #2aacc8;
+    background: #ffffff;
+    font-size: 16px;
+    &:placeholder-shown + label{
+      visibility: hidden;
+      z-index: -1;
+    }
+    &:not(:placeholder-shown) + label,
+    &:focus:not(:placeholder-shown) + label{
+      visibility: visible;
+      z-index: 1;
+      opacity: 1;
+      transform: translateY(-30px) scale(.8);
+      transition: all .3s;
+    }
+  }
+
+  textarea{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 15px;
+    border: 1px solid #b4bac5;
+    outline-color: #2aacc8;
+    background: #ffffff;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    &:placeholder-shown + label{
+      visibility: hidden;
+      z-index: -1;
+    }
+    &:not(:placeholder-shown) + label,
+    &:focus:not(:placeholder-shown) + label{
+      visibility: visible;
+      z-index: 1;
+      opacity: 1;
+      transform: translateY(-35px) scale(.8);
+      transition: all .3s;
+    }
+  }
+  .animated-input{
+    height: 0;
+    opacity: 0;
+    transition: all .5s ease;
+  }
+  .transition-height{
+    height: 40px;
+    opacity: 1;
+  }
+}
+
+.form-group__text-area{
+  label{
+    top: 30px;
+    bottom: auto;
+  }
+}

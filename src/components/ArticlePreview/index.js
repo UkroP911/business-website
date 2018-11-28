@@ -10,7 +10,6 @@ export default () =>
         <div className="article-preview">
             <div className="article-preview__header">
                 <div className="article-preview__logo">
-                    {/*<img src="" alt=""/>*/}
                     <span className="art-icon bg-pencil"></span>
                 </div>
                 <h3 className="article-preview__title">Clean Theme</h3>
